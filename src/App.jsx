@@ -5,7 +5,7 @@ import MainPage from './pages/MainPage';
 import DetailsPage from './pages/DetailsPage';
 import NotFound from './pages/NotFound';
 import { Switch, Route } from 'react-router-dom'
-// import routes from "./routes/index";
+
 
 class App extends Component {
     render() {
