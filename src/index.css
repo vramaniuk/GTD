@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Slack-Lato';
+  src: url('./fonts/Slack-Lato.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Slack-Lato, appleLogo, sans-serif;
 }

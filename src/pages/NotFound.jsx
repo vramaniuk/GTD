@@ -1,7 +1,9 @@
 import React from 'react';
 
 const NotFound = () => (
-    <h2>Ресурс не найден</h2>
+    <div className="App-body">
+        <h1>Ресурс не найден</h1>
+    </div>
 );
 
 export default NotFound

@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MainPage from './pages/MainPage';
+import DetailsPage from './pages/DetailsPage';
+import NotFound from './pages/NotFound';
+import { Switch, Route } from 'react-router-dom'
+// import routes from "./routes/index";
 
 class App extends Component {
     render() {
@@ -10,7 +15,11 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h1 className="App-title">Application for task management</h1>
                 </header>
-                {this.props.children}
+                <Switch>
+                    <Route exact path='/' component={MainPage}/>
+                    <Route path='/details' component={DetailsPage}/>
+                    <Route path='*' component={NotFound}/>
+                </Switch>
                 <footer className="App-footer">
                     <h1 className="App-title">Footer for app</h1>
                 </footer>

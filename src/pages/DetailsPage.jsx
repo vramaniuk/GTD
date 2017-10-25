@@ -2,7 +2,7 @@ import React from 'react';
 
 const DetailsPage = () => (
     <div className="App-body">
-        Details Page
+        <h1>Card details Page</h1>
     </div>
 );
 
