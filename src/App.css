@@ -33,9 +33,16 @@
 
 .App-body {
     background-color: forestgreen;
-    height: 582px;
-    padding: 20px;
-    color: white;
+    height: 621px;
+    display: flex;
+    /*padding: 20px;*/
+}
+.App-status-container-wrapper{
+    width:33.3%;
+    height:100%;
+    background-color:lightblue;
+    border-right:2px solid black;
+    color: #222222;
 }
 
 .App-footer {
