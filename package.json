@@ -1,8 +1,10 @@
 {
   "name": "gtd",
+  "homepage": "https://vramaniuk.github.io/gtd",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^1.0.0",
     "history": "^4.7.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
@@ -17,6 +19,8 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

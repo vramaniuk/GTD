@@ -2,11 +2,12 @@ import registerServiceWorker from './registerServiceWorker';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-// import {BrowserRouter} from 'react-router-dom';
 import {createStore, applyMiddleware} from 'redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import logger from 'redux-logger'
-import {ConnectedRouter, routerMiddleware} from 'react-router-redux'
+import { routerMiddleware} from 'react-router-redux'
+import {BrowserRouter} from 'react-router-dom'
+
 import createHistory from 'history/createBrowserHistory'
 import rootReducer from './reducers'
 import './index.css';
@@ -20,9 +21,9 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(logge
 
 ReactDOM.render(
     <Provider store={store}>
-        <ConnectedRouter history={history}>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <App/>
-        </ConnectedRouter>
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root'));
 
