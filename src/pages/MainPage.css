@@ -1,0 +1,45 @@
+.Main-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Main-todos-body {
+    background-color: forestgreen;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.Main-status-container-wrapper {
+    flex: 1 1 auto;
+    height: 100%;
+    background-color: lightblue;
+
+    color: #222222;
+}
+
+.Main-status-container-wrapper:not(:last-child) {
+    border-right: 2px solid black;
+}
+
+.add_todo_block {
+    height: 40px;
+    background-color:lightgrey;
+}
+
+.link-wrapper {
+    height: 28px;
+    width: 118px;
+    border:1px solid black;
+    margin: 4px auto;
+    background-color:aqua;
+    border-radius: 5px;
+    box-shadow:2px 2px 1px grey;
+    /*color:red;*/
+}
+.l_col{
+    font-size: large;
+    font-weight: 600;
+    color:red
+}

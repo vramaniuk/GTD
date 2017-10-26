@@ -15,7 +15,7 @@
 }
 
 .App-title {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .App-intro {
@@ -31,18 +31,26 @@
     }
 }
 
-.App-body {
-    background-color: forestgreen;
-    height: 621px;
-    display: flex;
-    /*padding: 20px;*/
+#root {
+    height: 100%;
 }
-.App-status-container-wrapper{
-    width:33.3%;
-    height:100%;
-    background-color:lightblue;
-    border-right:2px solid black;
-    color: #222222;
+
+.App {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.App-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.App-todos-body {
+    background-color: forestgreen;
+    display: flex;
+    height: 100%;
 }
 
 .App-footer {

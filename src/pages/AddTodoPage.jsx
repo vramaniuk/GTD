@@ -3,7 +3,7 @@ import AddTodo from '../containers/AddTodo'
 import {Link} from 'react-router-dom'
 
 const AddTodoPage = () => (
-    <div className="App-body">
+    <div className="App-todos-body">
         <AddTodo/>
         <h1>Adding Card Page</h1><br/>
         <Link to={`/`}><br/>

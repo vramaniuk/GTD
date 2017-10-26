@@ -23,7 +23,7 @@ class App extends Component {
                     <Route path='*' component={NotFound}/>
                 </Switch>
                 <footer className="App-footer">
-                    <h1 className="App-title">Footer for app</h1>
+                    <h1 className="App-title">Create your day</h1>
                 </footer>
             </div>
 

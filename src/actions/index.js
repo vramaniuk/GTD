@@ -1,4 +1,4 @@
-let nextTodoId = 0;
+let nextTodoId = 6;
  const addTodo = (name) => ({
     type: 'ADD_TODO',
     id: nextTodoId++,
