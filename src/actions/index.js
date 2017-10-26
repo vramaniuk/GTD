@@ -1,8 +1,10 @@
 let nextTodoId = 0;
-export const addTodo = (name) => ({
+ const addTodo = (name) => ({
     type: 'ADD_TODO',
     id: nextTodoId++,
     name:name,
-    status:'todo',
+    status:'ToDo',
     category:'task'
 });
+
+export {addTodo}

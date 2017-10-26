@@ -2,13 +2,13 @@ const data= [
     {
         id: 0,
         name: 'Do homework',
-        status: 'current',
+        status: 'ToDo',
         type: 'bug'
     },
     {
         id: 1,
         name: 'Take a shower',
-        status: 'current',
+        status: 'ToDo',
         type: 'task'
     },
     {
@@ -20,13 +20,19 @@ const data= [
     {
         id: 3,
         name: 'Cook',
-        status: 'completed',
-        type: 'task'
+        status: 'Done',
+        type: 'bug'
     },
     {
         id: 4,
+        name: 'Eat',
+        status: 'Done',
+        type: 'task'
+    },
+    {
+        id: 5,
         name: 'Sleep',
-        status: 'completed',
+        status: 'Done',
         type: 'task'
     }
 ]

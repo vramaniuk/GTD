@@ -1,13 +1,14 @@
-const cards = (state = [], action) => {
+import initialState from '../share/cards'
+const cards = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
                 ...state,
                 {
                     id: action.id,
-                    type: action.category||'task',
                     name: action.name,
-                    status:action.status||'todo'
+                    status:action.status||'todo',
+                    type: action.category||'task',
                 }
             ];
         default:

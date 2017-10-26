@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage';
 import DetailsPage from './pages/DetailsPage';
 import NotFound from './pages/NotFound';
 import { Switch, Route } from 'react-router-dom'
+import AddTodoPage from "./pages/AddTodoPage";
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path='/' component={MainPage}/>
                     <Route path='/details' component={DetailsPage}/>
+                    <Route path='/add' component={AddTodoPage}/>
                     <Route path='*' component={NotFound}/>
                 </Switch>
                 <footer className="App-footer">

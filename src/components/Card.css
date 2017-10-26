@@ -1,0 +1,28 @@
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    height: 57px;
+    width: 347px;
+    border: 1px solid #222;
+    margin: 15px auto;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow:5px 5px 2px grey;
+}
+
+.card-content {
+    margin-top:10px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.bug {
+    background-color: lightcoral;
+}
+
+.task {
+    background-color: aquamarine;
+}
