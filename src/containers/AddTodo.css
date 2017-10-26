@@ -1,0 +1,11 @@
+.fdiv {
+    word-break: break-all;
+    width: 55%;
+    max-height: 30px;
+    font-size: 16px;
+    padding: 6px;
+}
+
+.form-wrapper button{
+    width:100px;
+}

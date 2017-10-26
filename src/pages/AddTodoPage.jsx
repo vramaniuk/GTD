@@ -1,14 +1,19 @@
 import React from 'react';
-import AddTodo from '../containers/AddTodo'
-import {Link} from 'react-router-dom'
+import AddTodo from '../containers/AddTodo';
+import {Link} from 'react-router-dom';
+import './AddTodoPage.css';
+
 
 const AddTodoPage = () => (
-    <div className="App-todos-body">
-        <AddTodo/>
-        <h1>Adding Card Page</h1><br/>
-        <Link to={`/`}><br/>
-            <h1>return</h1>
-        </Link>
+    <div className="details-body">
+        <div className="card-details">
+            <h1>Adding Card Page</h1>
+            <AddTodo/>
+            <Link to={`/`}>
+                <h1>Back</h1>
+            </Link>
+
+        </div>
     </div>
 );
 
