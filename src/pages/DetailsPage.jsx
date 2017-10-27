@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './DetailsPage.css';
 
-const DetailsPage = ({ id, name, category, status, details, saveTodo, deleteTodo }) => {
-    let _name;
-    let _category;
-    let _status;
-    let _details;
+const DetailsPage = ({id, name, category, status, details, saveTodo, deleteTodo}) => {
+    let nameCopy;
+    let categoryCopy;
+    let statusCopy;
+    let detailsCopy;
     return (
         <div className="details-body">
             <div className="card-details">
@@ -17,7 +17,7 @@ const DetailsPage = ({ id, name, category, status, details, saveTodo, deleteTodo
                         if (!name.trim()) {
                             return
                         }
-                        saveTodo(id, _name, _category, _status, _details)
+                        saveTodo(id, nameCopy, categoryCopy, statusCopy, detailsCopy)
                     }}>
                         <fieldset>
                             <legend>Change you card</legend>
@@ -26,44 +26,45 @@ const DetailsPage = ({ id, name, category, status, details, saveTodo, deleteTodo
                                               placeholder="card name"
                                               defaultValue={name}
                                               ref={node => {
-                                                  _name = node
-                                              }} /></label><br />
+                                                  nameCopy = node
+                                              }}/></label><br/>
                             <label>status<select
                                 defaultValue={status}
                                 ref={node => {
-                                    _status = node
+                                    statusCopy = node
                                 }}>
                                 <option>ToDo</option>
                                 <option>inProgress</option>
                                 <option>Done</option>
-                            </select></label><br />
+                            </select></label><br/>
                             <label>type<select
                                 defaultValue={category}
                                 ref={node => {
-                                    _category = node
+                                    categoryCopy = node
                                 }}>
                                 <option>task</option>
                                 <option>bug</option>
-                            </select></label><br />
+                            </select></label><br/>
                             <label>Description<textarea
                                 rows="10"
                                 cols="60"
                                 defaultValue={details}
                                 ref={node => {
-                                    _details = node
+                                    detailsCopy = node
                                 }}>
-                    </textarea></label><br />
+                    </textarea></label><br/>
                         </fieldset>
+                        <div className="actions">
+                            <button type="submit">Save</button>
+                            <button type="button" onClick={e => {
+                                e.preventDefault();
+                                deleteTodo(id);
+                            }}>Delete
+                            </button>
+                        </div>
                     </form>
                 </div>
-                <div className="actions">
-                    <button type="submit">Save</button>
-                    <button type="button" onClick={e => {
-                        e.preventDefault();
-                        deleteTodo(id);
-                    }}>Delete
-                    </button>
-                </div>
+
                 <Link to={`/`}>
                     <h1>Back to cards</h1>
                 </Link>

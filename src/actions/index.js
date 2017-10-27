@@ -8,7 +8,7 @@ const addTodo = (name, category, details) => ({
     details: details,
 });
 
-const saveTodo = (id, name, category, status, details) => {
+const saveTodo = (id, name, category, status, details) => {console.log(name);
     return {
         type: 'SAVE_TODO',
         id,

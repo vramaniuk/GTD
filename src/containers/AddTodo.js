@@ -36,7 +36,7 @@ let AddTodo = ({dispatch}) => {
                     <label>Description<textarea rows="10" cols="60">
                     </textarea></label><br/>
                     <button type="submit">
-                        Add Todo
+                        Add Card
                     </button>
                 </fieldset>
 

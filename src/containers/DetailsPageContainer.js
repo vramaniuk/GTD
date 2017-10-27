@@ -3,10 +3,10 @@ import  DetailsPage  from '../pages/DetailsPage'
 import { saveTodo, deleteTodo } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
-    const id = parseInt(ownProps.match.params.id,10);
-    const matchedElem = state.todos.find(todo => {return todo.id === id});
+    const matchedElemId = parseInt(ownProps.match.params.id,10);
+    const matchedElem = state.todos.find(todo => {return todo.id === matchedElemId});
     return {
-        'id': matchedElem.id,
+        id: matchedElem.id,
         name: matchedElem.name,
         category: matchedElem.category,
         status: matchedElem.status,
@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        saveTodo: (id, name, category, status, details) => {
+        saveTodo: (id, name, category, status, details) => {console.log(name);
             dispatch(saveTodo(id, name, category, status, details));
             ownProps.history.push('/')
         },
