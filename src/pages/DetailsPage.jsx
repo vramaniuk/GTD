@@ -17,7 +17,7 @@ const DetailsPage = ({id, name, category, status, details, saveTodo, deleteTodo}
                         if (!name.trim()) {
                             return
                         }
-                        saveTodo(id, nameCopy, categoryCopy, statusCopy, detailsCopy)
+                        saveTodo(id, nameCopy.value, statusCopy.value, categoryCopy.value, detailsCopy)
                     }}>
                         <fieldset>
                             <legend>Change you card</legend>
@@ -55,7 +55,7 @@ const DetailsPage = ({id, name, category, status, details, saveTodo, deleteTodo}
                     </textarea></label><br/>
                         </fieldset>
                         <div className="actions">
-                            <button type="submit">Save</button>
+                            <button className="" type="submit">Save</button>
                             <button type="button" onClick={e => {
                                 e.preventDefault();
                                 deleteTodo(id);

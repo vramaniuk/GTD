@@ -1,21 +1,21 @@
 let nextTodoId = 6;
-const addTodo = (name, category, details) => ({
+const addTodo = (name, status, category, details) => ({
     type: 'ADD_TODO',
     id: nextTodoId++,
-    name: name,
-    status: 'ToDo',
-    category: category,
-    details: details,
+    name,
+    status,
+    category,
+    details,
 });
 
-const saveTodo = (id, name, category, status, details) => {console.log(name);
+const saveTodo = (id, name, status, category, details) => {
     return {
         type: 'SAVE_TODO',
         id,
-        name: name.value,
-        category: category.value,
-        status: status.value,
-        details: details.value,
+        name,
+        status,
+        category,
+        details,
     }
 };
 
@@ -26,4 +26,4 @@ const deleteTodo = (id) => {
     }
 };
 
-export { addTodo, saveTodo, deleteTodo }
+export {addTodo, saveTodo, deleteTodo}

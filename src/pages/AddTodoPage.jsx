@@ -10,7 +10,7 @@ const AddTodoPage = () => (
             <h1>Adding Card Page</h1>
             <AddTodo/>
             <Link to={`/`}>
-                <h1>Back</h1>
+                <h1>Back to cards</h1>
             </Link>
 
         </div>

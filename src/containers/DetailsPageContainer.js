@@ -1,10 +1,12 @@
-import { connect } from 'react-redux'
-import  DetailsPage  from '../pages/DetailsPage'
-import { saveTodo, deleteTodo } from '../actions'
+import {connect} from 'react-redux'
+import DetailsPage from '../pages/DetailsPage'
+import {saveTodo, deleteTodo} from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
-    const matchedElemId = parseInt(ownProps.match.params.id,10);
-    const matchedElem = state.todos.find(todo => {return todo.id === matchedElemId});
+    const matchedElemId = parseInt(ownProps.match.params.id, 10);
+    const matchedElem = state.todos.find(todo => {
+        return todo.id === matchedElemId
+    });
     return {
         id: matchedElem.id,
         name: matchedElem.name,
@@ -16,8 +18,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        saveTodo: (id, name, category, status, details) => {console.log(name);
-            dispatch(saveTodo(id, name, category, status, details));
+        saveTodo: (id, name, status, category, details) => {
+            dispatch(saveTodo(id, name, status, category, details));
             ownProps.history.push('/')
         },
         deleteTodo: (id) => {

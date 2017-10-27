@@ -4,36 +4,48 @@ import {addTodo} from '../actions'
 import './AddTodo.css'
 
 let AddTodo = ({dispatch}) => {
-    let input;
+    let name;
+    let status;
+    let category;
+    let details;
 
     return (
         <div className="form-wrapper">
             <form
                 onSubmit={e => {
                     e.preventDefault();
-                    if (!input.value.trim()) {
+                    if (!name.value.trim()) {
                         return
                     }
-                    dispatch(addTodo(input.value));
-                    input.value = ''
+                    dispatch(addTodo(name.value, status.value, category.value, details.value));
+                    name.value = '';
+                    status.value = '';
+                    category.value = '';
+                    details.value = '';
                 }}
             >
                 <fieldset>
                     <legend>add new card</legend>
                     <label>name<input className='fdiv' name="name" placeholder="card name" ref={node => {
-                        input = node
+                        name = node
                     }}/></label><br/>
 
-                    <label>status<select>
+                    <label>status<select ref={node => {
+                        status = node
+                    }}>
                         <option>ToDo</option>
                         <option>inProgress</option>
                         <option>Done</option>
                     </select></label><br/>
-                    <label>type<select>
+                    <label>type<select ref={node => {
+                        category = node
+                    }}>
                         <option>task</option>
                         <option>bug</option>
                     </select></label><br/>
-                    <label>Description<textarea rows="10" cols="60">
+                    <label>Description<textarea placeholder="description" rows="10" cols="60" ref={node => {
+                        details = node
+                    }}>
                     </textarea></label><br/>
                     <button type="submit">
                         Add Card
