@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Slack-Lato';
-    src: url('./fonts/Slack-Lato.ttf');
+    src: url('share/fonts/Slack-Lato.ttf');
 }
 
 html {

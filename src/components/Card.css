@@ -10,9 +10,13 @@ a {
     margin: 15px auto;
     text-decoration: none;
     border-radius: 10px;
-    box-shadow:5px 5px 2px grey;
+    box-shadow:2px 2px 2px grey;
+    transition: all 0.1s ease-out;
 }
-
+.card:hover{
+    box-shadow:5px 5px 2px grey;
+    filter:brightness(1.1);
+}
 .card-content {
     margin-top:10px;
     font-weight: 600;

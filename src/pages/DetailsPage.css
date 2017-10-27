@@ -32,6 +32,13 @@
     height: 40px;
     border-radius:10px;
     margin-right: 10px;
+    box-shadow:2px 2px 2px grey;
+    transition: all 0.1s ease-out;
+
+}
+.button:hover{
+    box-shadow:5px 5px 2px grey;
+    filter:brightness(1.1);
 }
 .save {
     background-color:lightgreen;
