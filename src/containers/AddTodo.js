@@ -19,8 +19,6 @@ let AddTodo = ({dispatch}) => {
                     }
                     dispatch(addTodo(name.value, status.value, category.value, details.value));
                     name.value = '';
-                    status.value = '';
-                    category.value = '';
                     details.value = '';
                 }}
             >
@@ -30,28 +28,30 @@ let AddTodo = ({dispatch}) => {
                         name = node
                     }}/></label><br/>
 
-                    <label>status<select ref={node => {
+                    <label>status<select defaultValue="ToDo" ref={node => {
                         status = node
                     }}>
                         <option>ToDo</option>
                         <option>inProgress</option>
                         <option>Done</option>
                     </select></label><br/>
-                    <label>type<select ref={node => {
+                    <label>type<select defaultValue="task" ref={node => {
                         category = node
                     }}>
                         <option>task</option>
                         <option>bug</option>
                     </select></label><br/>
-                    <label>Description<textarea placeholder="description" rows="10" cols="60" ref={node => {
+                    <label style={{display:"block",color:"grey"}}>Description</label><textarea
+                        placeholder="description"
+                        rows="10" cols="60"
+                        ref={node => {
                         details = node
                     }}>
-                    </textarea></label><br/>
+                    </textarea><br/>
                     <button className="button save" type="submit">
                         Add Card
                     </button>
                 </fieldset>
-
             </form>
         </div>
     );

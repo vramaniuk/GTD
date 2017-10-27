@@ -45,14 +45,15 @@ const DetailsPage = ({id, name, category, status, details, saveTodo, deleteTodo}
                                 <option>task</option>
                                 <option>bug</option>
                             </select></label><br/>
-                            <label>Description<textarea
+                            <label style={{display:"block",color:"grey"}}>Description</label><textarea
                                 rows="10"
                                 cols="60"
                                 defaultValue={details}
                                 ref={node => {
                                     detailsCopy = node
-                                }}>
-                    </textarea></label><br/>
+                                }}
+                        placeholder="description">
+                    </textarea><br/>
                         </fieldset>
                         <div className="actions">
                             <button className="button save" type="submit"><span>Save</span>

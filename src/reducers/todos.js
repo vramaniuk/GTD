@@ -1,6 +1,6 @@
 import initialState from '../share/cards'
 
-const cards = (state = initialState, action) => {
+const cards = (state = initialState.data, action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
