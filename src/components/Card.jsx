@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 import './Card.css'
 
-const Todo = ({onClick, id, status, name, type}) => (
+const Todo = ({onClick, id, status, name, category}) => (
 
     <Link to={`/details/${id}`}>
-        <div className={type === 'bug' ? "card todo-card bug" : "card todo-card task"}>
+        <div className={category === 'bug' ? "card todo-card bug" : "card todo-card task"}>
             <div className="card-content">
                 {name}
             </div>

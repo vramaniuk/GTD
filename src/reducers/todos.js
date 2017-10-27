@@ -8,12 +8,24 @@ const cards = (state = initialState, action) => {
                     id: action.id,
                     name: action.name,
                     status:action.status||'todo',
-                    type: action.category||'task',
+                    category: action.category||'task',
+                    details:action.details||'any text'
+                }
+            ];
+        case 'SAVE_TODO':
+            return [
+                ...state,
+                {
+                    id: action.id,
+                    name: action.name,
+                    status:action.status||'todo',
+                    category: action.category||'task',
+                    details:action.details||'any text'
                 }
             ];
         default:
             return state
     }
-}
+};
 
 export default cards

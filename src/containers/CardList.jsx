@@ -23,9 +23,9 @@ TodoList.propTypes = {
             id: PropTypes.number.isRequired,
             status: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
-            type: PropTypes.string.isRequired
+            category: PropTypes.string.isRequired
         }).isRequired
     ).isRequired
-}
+};
 
 export default connect(mapStateToProps)(TodoList)
