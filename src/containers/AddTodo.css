@@ -7,5 +7,14 @@
 }
 
 .form-wrapper button{
-    width:100px;
+    font-weight: 600;
+    font-size: 24px;
+    width: 135px;
+    height: 40px;
+    border-radius:10px;
+    margin-right: 10px;
+}
+
+.save {
+    background-color:lightgreen;
 }

@@ -47,14 +47,14 @@ let AddTodo = ({dispatch}) => {
                         details = node
                     }}>
                     </textarea></label><br/>
-                    <button type="submit">
+                    <button className="button save" type="submit">
                         Add Card
                     </button>
                 </fieldset>
 
             </form>
         </div>
-    )
-}
+    );
+};
 
 export default connect()(AddTodo)

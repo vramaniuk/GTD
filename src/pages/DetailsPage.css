@@ -24,3 +24,18 @@
     margin: 10px;
     font-size: large;
 }
+
+.button {
+    font-weight: 600;
+    font-size: 24px;
+    width: 100px;
+    height: 40px;
+    border-radius:10px;
+    margin-right: 10px;
+}
+.save {
+    background-color:lightgreen;
+}
+.delete {
+     background-color:darkred;
+ }
