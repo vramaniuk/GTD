@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 import Todo from '../components/Card';
-import { drop, allowDrop } from '../helpers/index';
-import { replaceTodo } from '../actions';
+import {drop} from '../helpers/index';
+import {replaceTodo} from '../actions';
 
-const TodoList = ({ todos, status, onMove }) => (
+const TodoList = ({todos, status, onMove}) => (
     <div
         className="todos-wrapper"
         onDrop={drop(status, onMove)}
-        onDragOver={allowDrop}>
+        onDragOver={(ev) => ev.preventDefault()}>
         <h2>{status}</h2>
         {todos.filter(todo => todo.status === status).map(todo => (
             <Todo key={todo.id} {...todo} />
@@ -24,7 +24,7 @@ const mapStateToProps = (state) => ({
 });
 const mapDispatchToProps = dispatch => {
     return {
-        onMove: (data) => {
+        onMove (data)  {
             dispatch(replaceTodo(data.id, data.status))
         },
 

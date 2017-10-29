@@ -20,7 +20,7 @@ const MainPage = (props) => (
             <div className="link-wrapper"><Link className="l_col" to={`/add`}>Add new Card </Link></div>
         </div>
     </div>
-)
+);
 
 export default MainPage;
 

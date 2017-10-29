@@ -10,7 +10,7 @@ const Todo = ({ id, status, name, category }) => (
         <div
             draggable="true"
             onDragStart={drag(id)}
-            className={category === 'bug' ? "card bug" : "card task"}>
+            className={"card "+ category}>
             <div className="card-content">
                 {name}
             </div>

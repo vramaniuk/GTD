@@ -1,12 +1,8 @@
 import { replaceTodo } from '../actions/index';
 
-function allowDrop(ev) {
-    ev.preventDefault()
-}
-
-let drag = (todo) => {
+let drag = (id) => {
     return ev => {
-        ev.dataTransfer.setData("text", todo)
+        ev.dataTransfer.setData("text", id)
     }
 };
 
@@ -17,4 +13,4 @@ let drop = (status, onMove) => {
     }
 };
 
-export { allowDrop, drag, drop }
+export {  drag, drop }
