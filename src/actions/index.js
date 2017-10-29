@@ -26,4 +26,12 @@ const deleteTodo = (id) => {
     }
 };
 
-export {addTodo, saveTodo, deleteTodo}
+const replaceTodo = (id, status) => {
+    return {
+        type: 'REPLACE_TODO',
+        id,
+        status
+    }
+};
+
+export {addTodo, saveTodo, deleteTodo,replaceTodo}
